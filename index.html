@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			background: linear-gradient(to left,#ffaaff,#aaffaa);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+	</style>
+	<title>myown</title>
+</head>
+<body>
+	<h1 id="headNum">0</h1>
+	<input id="inputAmt" type="text">
+	<button id="addExp">+</button>
+	<!-- <button id="clearIT" type="reset">reset</button> -->
+</body>
+	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+<script>
+  new Darkmode().showWidget();
+</script>
+	<script>
+		const headEle = document.querySelector("#headNum")
+		let totalExp = 0
+
+		headEle.textContent = totalExp
+		function countInc(argument) {
+			const inputEle = document.querySelector("#inputAmt").value;
+
+			if (isNaN(inputEle)) {
+				var r = confirm("You entered a NaN So refreshing the page")
+				if (r == true) {
+					location.reload(true/false)
+				}else {
+					headEle.innerHTML = "refresh the page or delete the unwanted characters"
+				}
+			}
+			else{
+				if (inputEle == '') {
+					alert("enter somehting")
+				}else {
+					const exp = parseFloat(inputEle,10)
+					totalExp = totalExp + exp
+					headEle.textContent = totalExp
+				} 
+			}
+		}
+		const ele = document.querySelector("#addExp")
+		ele.addEventListener("click", countInc, false)
+	</script>
+</html>

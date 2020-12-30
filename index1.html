@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	.bang {
+		/*background-image: url(car.jpg);*/
+		/*pointer-events: none;*/
+	}
+</style>
+<body>
+	<script type="text/javascript">
+		// let pract ={};
+		// let xhr = new XMLHttpRequest();
+		// xhr.open("GET","pract.json",true);
+		// xhr.responseType = 'text';
+		// xhr.onload = event => {
+		// 	if (xhr.status === 200) {
+		// 		pract = JSON.parse(xhr.responseText);
+		// 		console.log("json text is responding");
+		// 		console.log(pract.livingroom.contents);
+
+		// 	}
+		// };
+		// xhr.send();
+		// function wait(duration = 0){
+			
+		// 	return new Promise(resolve => setTimeout(resolve,duration));
+		// }
+		
+
+		
+		// wait(1000)
+		// 	.then(() => console.log("one"))
+		// 	.then(() => wait(1000))
+		// 	.then(() => console.log("two"))
+		// 	.then(() => wait(1000))
+		// 	.then(() => console.log("three"))
+		// 	.then(() => wait(1000))
+		// 	.then(() => console.log("four"))
+		// 	.then(() => wait(1000))
+		// 	.then(() => console.log("five"))
+		// 	.then(() => wait(1000))
+		// 	.then(() => console.log("six"))
+		// 	.then(() => wait(1000))
+		// 	.then(() => console.log("seven"))
+		
+		function palin(number){
+			var str = number.toString();
+			let re  = /\W_/g;
+			var str1 = str.replace(re,"  ");
+			return str1
+		}
+		console.log(palin("my name"))
+		
+			
+
+
+
+	</script>
+</body>
+</html>
